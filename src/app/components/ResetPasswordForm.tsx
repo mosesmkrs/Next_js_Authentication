@@ -42,9 +42,12 @@ const ResetPasswordForm = ({ jwtUserId }: Props) => {
   } = useForm<InputType>({
     resolver: zodResolver(FormSchema),
   });
-  useEffect(() => {
-    setPassStrength(passwordStrength(watch().password).id);
-  }, [watch().password]);
+  const passwordValue = watch().password;
+
+useEffect(() => {
+  setPassStrength(passwordStrength(passwordValue).id);
+}, [passwordValue, watch]);
+
 
   const resetPass: SubmitHandler<InputType> = async (data) => {
     try {
