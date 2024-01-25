@@ -35,7 +35,7 @@ const ForgotPasswordPage = () => {
     }
   };
   return (
-    <div className="flex grid-cols-1 md:grid-cols-3 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 items-center">
       <form
         className="flex flex-col gap-2 p-2 border m-2 rounded-md shadow"
         onSubmit={handleSubmit(submitRequest)}
@@ -59,8 +59,8 @@ const ForgotPasswordPage = () => {
       <Image
         src={"/forgotPass.png"}
         alt="Forgot Password"
-        width={400}
-        height={400}
+        width={500}
+        height={500}
         className="col-span-2 place-self-center"
       />
     </div>
